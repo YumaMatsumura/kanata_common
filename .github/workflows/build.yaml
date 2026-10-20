@@ -1,0 +1,49 @@
+name: build and test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  ros_ci:
+    name: ROS 2 CI (Jazzy)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Check for ROS packages
+        id: packages
+        run: |
+          if find . -name package.xml -not -path './.git/*' -print -quit | grep -q .; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::No ROS packages found. Build and tests are skipped."
+            echo "No ROS packages found. Build and tests were not run." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Setup ROS 2
+        if: steps.packages.outputs.found == 'true'
+        uses: ros-tooling/setup-ros@v0.7
+        with:
+          required-ros-distributions: jazzy
+
+      - name: Build & Test (all packages in workspace)
+        if: steps.packages.outputs.found == 'true'
+        uses: ros-tooling/action-ros-ci@v0.4
+        with:
+          target-ros2-distro: jazzy
+          import-token: ${{ secrets.GITHUB_TOKEN }}
