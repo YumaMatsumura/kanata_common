@@ -16,9 +16,19 @@ permissions:
   contents: read
 
 jobs:
-  ros_ci:
-    name: ROS 2 CI (Jazzy)
-    runs-on: ubuntu-24.04
+  ros_ci_build:
+    name: ROS 2 build and test (Jazzy, ${{ matrix.arch }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: x86-64
+            runner: ubuntu-24.04
+          - arch: ARM64
+            runner: ubuntu-24.04-arm
+    runs-on: ${{ matrix.runner }}
+    container:
+      image: ubuntu:24.04
     timeout-minutes: 45
     steps:
       - name: Checkout repository
@@ -47,3 +57,16 @@ jobs:
         with:
           target-ros2-distro: jazzy
           import-token: ${{ secrets.GITHUB_TOKEN }}
+
+  # Keep the required check name stable across matrix jobs.
+  ros_ci:
+    name: ROS 2 CI (Jazzy)
+    needs: ros_ci_build
+    if: ${{ always() }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Require both architectures to pass
+        env:
+          BUILD_RESULT: ${{ needs.ros_ci_build.result }}
+        run: test "$BUILD_RESULT" = success
