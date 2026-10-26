@@ -13,7 +13,7 @@
 
 ## 既存の変更を守る
 
-- 未依頼のGit操作は加えません。許可範囲は[git.md](https://github.com/YumaMatsumura/kanata_workflow/blob/5f7a80bdb9cabc78344eb668d1454a5ae19ee4e1/rules/git.md)に従います。
+- 未依頼のGit操作は加えません。許可範囲は[git.md](https://github.com/YumaMatsumura/kanata_workflow/blob/25835908e4cf4343a3535577e7ff3dc48e2fbb98/rules/git.md)に従います。
 
 - コードの整理では、動作や他のパッケージからの使い方を変えません。
   動作変更が必要な場合は、不具合修正・機能追加として扱い、依頼範囲外なら実施前に確認します。

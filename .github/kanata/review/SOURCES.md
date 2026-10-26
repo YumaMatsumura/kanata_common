@@ -52,4 +52,4 @@ JSON Schema・sync-paramsの利用を前提とせず、AUTOSAR C++14 Guidelines�
 | [Autowareのコミット規約](https://docs.autoware.org/main/contributing/pull-request-guidelines/commit-guidelines/) | ブランチ名と`Signed-off-by`の扱い |
 | [pre-commit](https://pre-commit.com/) | 書式・コードの検査方法 |
 
-Git運用と共著表記は[git.md](https://github.com/YumaMatsumura/kanata_workflow/blob/5f7a80bdb9cabc78344eb668d1454a5ae19ee4e1/rules/git.md)、検証方法は[testing.md](rules/testing.md)にまとめています。
+Git運用と共著表記は[git.md](https://github.com/YumaMatsumura/kanata_workflow/blob/25835908e4cf4343a3535577e7ff3dc48e2fbb98/rules/git.md)、検証方法は[testing.md](rules/testing.md)にまとめています。
