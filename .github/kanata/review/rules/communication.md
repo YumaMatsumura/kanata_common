@@ -27,7 +27,7 @@
   すでに説明した用語を毎回説明し直す必要はありません。
 
 - コマンド・ファイル名・コードの名前は、正確な表記を残します。文章を簡単にするために名前や意味を変えません。
-  コミットメッセージは[git.md](https://github.com/YumaMatsumura/kanata_workflow/blob/5f7a80bdb9cabc78344eb668d1454a5ae19ee4e1/rules/git.md)の英語の形式に従います。
+  コミットメッセージは[git.md](https://github.com/YumaMatsumura/kanata_workflow/blob/25835908e4cf4343a3535577e7ff3dc48e2fbb98/rules/git.md)の英語の形式に従います。
 
 - 同じ内容の繰り返しや、コードをそのまま読み上げる説明を減らします。
 

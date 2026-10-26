@@ -1,17 +1,17 @@
 {
   "format_version": 1,
   "generated_files": {
-    ".github/kanata/review/SOURCES.md": "c9d9c809c3e9a8612033d2d0f845f0658acb987fa2f7070bdf7d680ff2aa10d6",
+    ".github/kanata/review/SOURCES.md": "3bac23b9510473feecff54b08705e622733039cf9655bb413690b840ad0fd2e5",
     ".github/kanata/review/rules/coding.md": "132c7fe3dcc6f98b3f7d71b1c30f685892b23483d9c2d33eb98ab76921eeef27",
-    ".github/kanata/review/rules/common.md": "e8573d6cd0224e6808f356b9af5e7edfe7d3199d1d94085cba48fab0be4412ac",
-    ".github/kanata/review/rules/communication.md": "eadae2d8ee3e8bc1eb65d00d5b2c0ed275c8ff7adfeb84a2d0c75d4d25d675f9",
+    ".github/kanata/review/rules/common.md": "0081b1c50133db71d1c255f50ba38288e792be4689d85e042d289b248deb3d87",
+    ".github/kanata/review/rules/communication.md": "9835d4fb1eb46ab18501ef57f0968fbe71a6cf49401185971ab2e4ebda27a802",
     ".github/kanata/review/rules/kanata.md": "bf1c8383d90e8f0ea300fe4f58f1c891512a8f5ab70032305ee1a3191c49f3ba",
     ".github/kanata/review/rules/review.md": "a88cc4e3b6c39a26852e918bec9a5b6cc99d470e0cd8db5275c11a2a1725d299",
     ".github/kanata/review/rules/testing.md": "f30b658145f9d08eb857963f6764929389f946fbf27f23c4e0a9398593925973",
     "AGENTS.md": "7d46ed09d2f7a313220be28d9f68ebdc6084acd45e6ce45df18737a0b081c6de"
   },
   "generator_sha256": "8222c65cf2d7871efe1e53aa57c63172c65e3c981af845c981c64faf0da5567d",
-  "source_commit": "5f7a80bdb9cabc78344eb668d1454a5ae19ee4e1",
+  "source_commit": "25835908e4cf4343a3535577e7ff3dc48e2fbb98",
   "source_files": {
     "SOURCES.md": {
       "sections": null,
